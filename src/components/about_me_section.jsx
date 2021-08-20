@@ -28,9 +28,9 @@ const AboutMe=()=> {
         </motion.p>
         <motion.button variants={Fade}>Contact Me</motion.button>
       </Description>
-      <motion.Image variants={PhotoAnim} >
+      <Image variants={PhotoAnim} >
           <motion.img src={port} alt="yoyo" />
-        </motion.Image>
+        </Image>
         <Wave />
     </About>
   );

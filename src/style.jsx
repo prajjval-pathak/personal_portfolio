@@ -1,4 +1,5 @@
 import styled  from "styled-components";
+import { motion } from "framer-motion";
 export const About=styled.div`
 min-height:90vh;
 align-items: center;
@@ -37,6 +38,6 @@ img{
   object-fit: cover;
 }
 `
-export const Hide=styled.div`
+export const Hide=styled(motion.div)`
 overflow:hidden;
 `
