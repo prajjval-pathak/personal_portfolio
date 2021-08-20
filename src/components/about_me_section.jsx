@@ -1,31 +1,37 @@
 import React from "react";
-import home1 from "../img/home1.png";
+import port from "../img/port.png";
 // import styled from 'styled-components'
 import { Description,About,Hide,Image } from "../style";
+import { TitleAnim, PhotoAnim, Fade } from "../animation";
+import { motion } from "framer-motion";
+import Wave from "./wave";
+
 const AboutMe=()=> {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div className="title" >
           <div className="hide">
-            <h2>Prajjval Pathak</h2>
+            <motion.h2 variants={TitleAnim}>Prajjval Pathak</motion.h2>
           </div>
           <Hide>
-            <h3>
+            <motion.h3 variants={TitleAnim}>
               (Tech <span>Enthusiast)</span>
-            </h3>
+            </motion.h3>
           </Hide>
-        </div>
-        <p>
-          Aspiring to be a core tem member of a well reputed organization where
+        </motion.div>
+        <motion.p variants={Fade}>
+         A fourth year computer-science student of Shri Vaishnav Instiute of technology
           I can learn new technologies and methodologies and innovate the new
+         aspiring to be a core tem member of a well reputed organization where
           things which can improve the existing technology
-        </p>
-        <button>Contact Me</button>
+        </motion.p>
+        <motion.button variants={Fade}>Contact Me</motion.button>
       </Description>
-      <Image>
-          <img src={home1} alt="yoyo" />
-        </Image>
+      <motion.Image variants={PhotoAnim} >
+          <motion.img src={port} alt="yoyo" />
+        </motion.Image>
+        <Wave />
     </About>
   );
 };

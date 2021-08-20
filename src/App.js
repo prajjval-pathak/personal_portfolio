@@ -1,23 +1,26 @@
 import GlobalStyle from "./components/global_style";
-import { BrowserRouter,Route,Switch } from "react-router-dom";
+import { Route,Switch,useLocation } from "react-router-dom";
 import AboutMePage from "./pages/about_me";
 import ContactUs from "./pages/contact_me";
 import NavBar from "./components/nav_bar";
+import { AnimatePresence } from "framer-motion";
 function App() {
+   const location=useLocation();
+console.log(location)
   return (
-    <div className="App">
-      <BrowserRouter>
+    <div className="App"> 
       <GlobalStyle/>
-      <NavBar/>
-      <Switch>
-        <Route path="/" exact>     
+       <NavBar/>
+       <AnimatePresence exitBeforeEnter>     
+      <Switch location={location} key={location.pathname} >
+        <Route path="/" exact>  
         <AboutMePage/>  
        </Route>
-       <Route path="/contactme" exact>     
+       <Route path="/contactme">     
         <ContactUs/>  
        </Route>
      </Switch>
-     </BrowserRouter>
+     </AnimatePresence>
     </div>
   );
 }

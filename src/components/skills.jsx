@@ -5,10 +5,18 @@ import noder from "../img/nnodejs.svg";
 import home2 from "../img/home2.png";
 import { Description,About,Image } from "../style";
 import styled from "styled-components";
+import { scrollReveal } from "../animation";
+import { useScroll } from "./use_scroll";
 
 const Skills = () => {
+  const [element, controls] = useScroll();
   return (
-    <Skill>
+    <Skill
+    variants={scrollReveal}
+    animate={controls}
+    initial="hidden"
+    ref={element}
+    >
       <Description>
         <h2>
           Technical <span> Skills</span>
@@ -71,6 +79,8 @@ flex:.3;
 const Cards=styled.div`
 display:flex;
 flex-wrap:wrap;
+@media (max-width: 1100px) {
+    justify-content: center;}
 `
 const Card = styled.div`
   flex-basis: 20rem;

@@ -22,7 +22,7 @@ const NavBar=()=>{
   );
 }
 const StyledNav=styled.nav`
-min-min-height:10 vh;
+min-height:10 vh;
 display:flex;
 margin:auto;
 justify-content:space-between;
@@ -44,10 +44,27 @@ ul{
 #logo{
    font-size: 1.5rem;
    font-weight: lighter;
-   font-family: "lobster";
+   font-family: "lobster      ";
 }
 li{
   padding-left: 3rem;
-}`
+}
+@media (max-width: 1100px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    #logo {
+      display: inline-block;
+      margin: 1rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding: 0;
+      }
+    }
+  }`
+
 
 export default NavBar;

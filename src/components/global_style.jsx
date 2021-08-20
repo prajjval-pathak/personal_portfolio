@@ -10,6 +10,12 @@ body{
   background: #1b1b1b;
 
 }
+html{
+    @media (max-width: 1021px){
+        font-size: 75%;
+    }
+    
+}
 button{
     font-weight: bold;
     font-size: 1.1.rem;

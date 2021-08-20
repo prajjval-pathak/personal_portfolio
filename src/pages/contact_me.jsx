@@ -1,12 +1,17 @@
 import React from "react";
 //Animations
-// import { pageAnimation, titleAnim } from "../animation";
+ import { PageAnimation } from "../animation";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 
 const ContactUs = () => {
   return (
-    <ContactStyle
-    style={{ background: "#fff" }}
+    <ContactStyle  
+    exit="exit"
+    variants={PageAnimation}
+    initial="hidden"
+    animate="show"
     >
       <Title>
         <Hide>
@@ -15,22 +20,30 @@ const ContactUs = () => {
       </Title>
       <div>
         <Hide>
-          <Social >
+          <Social>
             <Circle />
-            <h2>Send Us A Message</h2>
+            <a href="mailto:prajjvalpathak@gmail.com"> Send me an e-mail </a>
           </Social>
         </Hide>
         <Hide>
-          <Social >
+          <Social>
             <Circle />
-            <h2>Send an email.</h2>
+            <a
+              href="https://wa.me/
+            18827849718"
+            >
+              {" "}
+              Send me a whatsapp message{" "}
+            </a>
           </Social>
         </Hide>
         <Hide>
-          <Social >
+          <Social>
             <Circle />
-          <h2>  <a href="https://www.linkedin.com/in/prajjval-pathak-292658190"> Linkdin </a>
-          </h2>
+            <a href="https://www.linkedin.com/in/prajjval-pathak-292658190">
+              {" "}
+              Linkdin{" "}
+            </a>
           </Social>
         </Hide>
       </div>
@@ -38,10 +51,11 @@ const ContactUs = () => {
   );
 };
 
-const ContactStyle = styled.div`
+
+const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
-  color: #353535;
-  min-height: 90vh;
+  color: #fdfdfd;
+  min-height: 80vh;
   @media (max-width: 1500px) {
     padding: 2rem;
     font-size: 1rem;
@@ -49,7 +63,7 @@ const ContactStyle = styled.div`
 `;
 const Title = styled.div`
   margin-bottom: 4rem;
-  color: black;
+  color: #faf8f8;
   @media (max-width: 1500px) {
     margin-top: 5rem;
   }
@@ -61,12 +75,19 @@ const Circle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  background: #353535;
+  background: #6e6d6d;
 `;
 const Social = styled.div`
   display: flex;
   align-items: center;
   h2 {
+    margin: 2rem;
+  }
+  a {
+    color: #e2e2e2;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 3rem;
     margin: 2rem;
   }
 `;
