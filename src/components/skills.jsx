@@ -3,6 +3,7 @@ import skillc from "../img/nc++.svg";
 import skillr from "../img/nreact.svg";
 import noder from "../img/nnodejs.svg";
 import home2 from "../img/home2.png";
+import ml from "../img/machine-learning.png"
 import { Description,About,Image } from "../style";
 import styled from "styled-components";
 import { scrollReveal } from "../animation";
@@ -48,10 +49,10 @@ const Skills = () => {
         </Card>
         <Card>
           <div className="icon">
-            <img src={noder} alt="c++" />
-            <h3>NodeJs</h3>
+            <img src={ml} alt="ml" />
+            <h3>Machine Learning</h3>
           </div>
-          <p>Familiar with javaScript backend framework NodeJs</p>
+          <p>Familiar with Machine learning modules such as pandas numpy matlplotlib seaborn</p>
         </Card>
       </Cards>
       </Description>

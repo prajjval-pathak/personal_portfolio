@@ -1,6 +1,6 @@
 import React from "react";
 //Animations
- import { PageAnimation } from "../animation";
+ import { PageAnimation, TitleAnim } from "../animation";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -15,18 +15,18 @@ const ContactUs = () => {
     >
       <Title>
         <Hide>
-          <h2>Get in touch.</h2>
+          <motion.h2 variants={TitleAnim}>Get in touch.</motion.h2>
         </Hide>
       </Title>
       <div>
         <Hide>
-          <Social>
+          <Social variants={TitleAnim}>
             <Circle />
-            <a href="mailto:prajjvalpathak@gmail.com"> Send me an e-mail </a>
+            <a variants={TitleAnim} href="mailto:prajjvalpathak@gmail.com"> Send me an e-mail </a>
           </Social>
         </Hide>
         <Hide>
-          <Social>
+          <Social variants={TitleAnim}>
             <Circle />
             <a
               href="https://wa.me/
@@ -38,7 +38,7 @@ const ContactUs = () => {
           </Social>
         </Hide>
         <Hide>
-          <Social>
+          <Social variants={TitleAnim}>
             <Circle />
             <a href="https://www.linkedin.com/in/prajjval-pathak-292658190">
               {" "}
