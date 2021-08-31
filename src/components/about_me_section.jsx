@@ -22,9 +22,8 @@ const AboutMe=()=> {
         </motion.div>
         <motion.p variants={Fade}>
          A fourth year computer-science student of Shri Vaishnav Instiute of technology
-          I can learn new technologies and methodologies and innovate the new
-         aspiring to be a core tem member of a well reputed organization where
-          things which can improve the existing technology
+         aspiring to be member of a well reputed organization where
+         I can learn new technologies and methodologies and innovate the new things which can improve the existing technology
         </motion.p>
         <Link to="/contactme">
         <motion.button variants={Fade}>Contact Me</motion.button>
