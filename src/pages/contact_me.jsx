@@ -31,10 +31,7 @@ const ContactUs = () => {
             <a
               href="https://wa.me/
             18827849718"
-            >
-              {" "}
-              Send me a whatsapp message{" "}
-            </a>
+            > Send me a whatsapp message</a>
           </Social>
         </Hide>
         <Hide>
@@ -56,7 +53,7 @@ const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #fdfdfd;
   min-height: 80vh;
-  @media (max-width: 1500px) {
+  @media (max-width: 1100px) {
     padding: 2rem;
     font-size: 1rem;
   }
@@ -64,7 +61,7 @@ const ContactStyle = styled(motion.div)`
 const Title = styled.div`
   margin-bottom: 4rem;
   color: #faf8f8;
-  @media (max-width: 1500px) {
+  @media (max-width: 1100px) {
     margin-top: 5rem;
   }
 `;

@@ -4,8 +4,8 @@ import port from "../img/port.png";
 import { Description,About,Hide,Image } from "../style";
 import { TitleAnim, PhotoAnim, Fade } from "../animation";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Wave from "./wave";
-
 const AboutMe=()=> {
   return (
     <About>
@@ -26,7 +26,9 @@ const AboutMe=()=> {
          aspiring to be a core tem member of a well reputed organization where
           things which can improve the existing technology
         </motion.p>
+        <Link to="/contactme">
         <motion.button variants={Fade}>Contact Me</motion.button>
+        </Link>
       </Description>
       <Image variants={PhotoAnim} >
           <motion.img src={port} alt="yoyo" />
